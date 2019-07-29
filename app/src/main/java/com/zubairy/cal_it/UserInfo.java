@@ -54,7 +54,7 @@ public class UserInfo extends AppCompatActivity {
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
         // get reference to 'users' node
-        mFirebaseDatabase = mFirebaseInstance.getReference("Users");
+        mFirebaseDatabase = mFirebaseInstance.getReference("Nutri");
 
         // store app title to 'app_title' node
         mFirebaseInstance.getReference("app_title").setValue("Cal_It");
@@ -89,8 +89,8 @@ public class UserInfo extends AppCompatActivity {
             userId = mFirebaseDatabase.push().getKey();
 
         }
-        Users users = new Users(name, email, password, phone, age, weight, height);
-        mFirebaseDatabase.child(userId).setValue(users);
+        Nutri nutri = new Nutri(name, email, password, phone, age, weight, height);
+        mFirebaseDatabase.child(userId).setValue(nutri);
 
         signIn(name, email,  password, phone, age, weight, height);
 
@@ -164,8 +164,8 @@ public class UserInfo extends AppCompatActivity {
                     }
 
                 } else {
-                    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference("users");
-                    Users user = new Users(Name, email, Password, phone, Age, Height, Weight);
+                    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference("Nutri");
+                    Nutri user = new Nutri(Name, email, Password, phone, Age, Height, Weight);
                     String uId = FirebaseAuth.getInstance().getCurrentUser().getUid();
                     mRef.child(uId).setValue(user);
 

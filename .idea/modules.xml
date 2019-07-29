@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Cal_IT.iml" filepath="$PROJECT_DIR$/Cal_IT.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Cal_IT_Nutri.iml" filepath="$PROJECT_DIR$/Cal_IT_Nutri.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CAL_IT_NUTRI.iml" filepath="$PROJECT_DIR$/CAL_IT_NUTRI.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

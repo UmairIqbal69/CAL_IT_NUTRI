@@ -19,14 +19,14 @@ public class NutriDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nutri_data);
         final TextView name = findViewById(R.id.textviewwww);
-        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Nutri");
         String userId = FirebaseAuth.getInstance().getUid();
 
         mDatabase.child(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                Users user = dataSnapshot.getValue(Users.class);
+                Nutri user = dataSnapshot.getValue(Nutri.class);
                 name.setText(user.getName());
                 //      Log.d(TAG, "User name: " + user.getName() + ", email " + user.getEmail());
             }

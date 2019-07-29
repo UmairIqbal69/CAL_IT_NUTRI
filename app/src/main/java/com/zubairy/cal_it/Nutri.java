@@ -8,7 +8,7 @@ import com.google.firebase.database.IgnoreExtraProperties;
  */
 
 @IgnoreExtraProperties
-public class Users {
+public class Nutri {
 
     public String name , email, password;
     public String  phone , age , height , weight;
@@ -17,10 +17,10 @@ public class Users {
 
     // Default constructor required for calls to
     // DataSnapshot.getValue(User.class)
-    public Users() {
+    public Nutri() {
     }
 
-    public Users(String name , String email, String password , String phone , String age , String height , String weight) {
+    public Nutri(String name , String email, String password , String phone , String age , String height , String weight) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -30,7 +30,7 @@ public class Users {
         this.weight = weight;
     }
 
-    public Users(String name , String phone , String age , String height , String weight){
+    public Nutri(String name , String phone , String age , String height , String weight){
         this.name = name;
         this.age = age;
         this.phone = phone;

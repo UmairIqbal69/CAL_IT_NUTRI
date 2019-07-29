@@ -51,7 +51,7 @@ public class Profile extends AppCompatActivity {
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
         // get reference to 'users' node
-        mFirebaseDatabase = mFirebaseInstance.getReference("users");
+        mFirebaseDatabase = mFirebaseInstance.getReference("Nutri");
 
         // store app title to 'app_title' node
         mFirebaseInstance.getReference("Cal_It").setValue("Realtime Database");
@@ -90,9 +90,9 @@ public class Profile extends AppCompatActivity {
         delusr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                FirebaseUser Nutri = FirebaseAuth.getInstance().getCurrentUser();
 
-                user.delete()
+                Nutri.delete()
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
@@ -132,7 +132,7 @@ public class Profile extends AppCompatActivity {
             userId = mFirebaseDatabase.push().getKey();
         }
 
-        Users user = new Users(name, phone , age , height , weight);
+        Nutri user = new Nutri(name, phone , age , height , weight);
 
         mFirebaseDatabase.child(userId).setValue(user);
 
@@ -147,7 +147,7 @@ public class Profile extends AppCompatActivity {
         mFirebaseDatabase.child(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Users user = dataSnapshot.getValue(Users.class);
+                Nutri user = dataSnapshot.getValue(Nutri.class);
 
                 // Check for null
                 if (user == null) {
